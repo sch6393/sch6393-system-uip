@@ -107,7 +107,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 90,107.5 90,179.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <State x:Name="__ReferenceID5" DisplayName="State - Set Variable" sap:VirtualizedContainerService.HintSize="161.5,61" sap2010:WorkflowViewState.IdRef="State_1">
+      <State x:Name="__ReferenceID5" DisplayName="State - Set Variable" sap:VirtualizedContainerService.HintSize="519,618" sap2010:WorkflowViewState.IdRef="State_1">
         <State.Entry>
           <Sequence sap:VirtualizedContainerService.HintSize="473,254" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
@@ -126,7 +126,7 @@
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
                       <InArgument x:TypeArguments="x:TimeSpan">
-                        <CSharpValue x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">TimeSpan.FromSeconds(5);</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">TimeSpan.FromMinutes(2);</CSharpValue>
                       </InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
@@ -626,7 +626,7 @@
                               <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">!bErrorKey</CSharpValue>
                             </Transition.Condition>
                             <Transition.To>
-                              <State x:Name="__ReferenceID0" DisplayName="State - Check Queue" sap:VirtualizedContainerService.HintSize="1210,2737" sap2010:WorkflowViewState.IdRef="State_5">
+                              <State x:Name="__ReferenceID0" DisplayName="State - Check Queue" sap:VirtualizedContainerService.HintSize="169.5,61" sap2010:WorkflowViewState.IdRef="State_5">
                                 <State.Entry>
                                   <Sequence sap:VirtualizedContainerService.HintSize="1164,2373" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -1137,7 +1137,7 @@
                                                 </Sequence>
                                               </ui:CommentOut.Body>
                                             </ui:CommentOut>
-                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Argument : arg_jaHttpReturn / In / JArray&#xD;&#xA;&#xD;&#xA;Parsing Script" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="436,173" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Process\\Process.xaml">
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Argument : arg_jaHttpReturn / In / JArray&#xA;&#xA;Parsing Script" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="436,173" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Process\\Process.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <InArgument x:TypeArguments="njl:JArray" x:Key="arg_jaHttpReturn">
                                                   <CSharpValue x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">jaHttpReturn</CSharpValue>
