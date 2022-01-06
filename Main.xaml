@@ -626,7 +626,7 @@
                               <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">!bErrorKey</CSharpValue>
                             </Transition.Condition>
                             <Transition.To>
-                              <State x:Name="__ReferenceID0" DisplayName="State - Check Queue" sap:VirtualizedContainerService.HintSize="169.5,61" sap2010:WorkflowViewState.IdRef="State_5">
+                              <State x:Name="__ReferenceID0" DisplayName="State - Check Queue" sap:VirtualizedContainerService.HintSize="1210,2737" sap2010:WorkflowViewState.IdRef="State_5">
                                 <State.Entry>
                                   <Sequence sap:VirtualizedContainerService.HintSize="1164,2373" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -727,7 +727,7 @@
                                                 </ui:HttpClient.Cookies>
                                                 <ui:HttpClient.EndPoint>
                                                   <InArgument x:TypeArguments="x:String">
-                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">strEndPoint_Local</CSharpValue>
+                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">strEndPoint</CSharpValue>
                                                   </InArgument>
                                                 </ui:HttpClient.EndPoint>
                                                 <ui:HttpClient.Headers>
@@ -1108,7 +1108,7 @@
                                       <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">bQueue</CSharpValue>
                                     </Transition.Condition>
                                     <Transition.To>
-                                      <State x:Name="__ReferenceID4" DisplayName="State - Job" sap:VirtualizedContainerService.HintSize="524,932" sap2010:WorkflowViewState.IdRef="State_6">
+                                      <State x:Name="__ReferenceID4" DisplayName="State - Job" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_6">
                                         <State.Entry>
                                           <Sequence sap:VirtualizedContainerService.HintSize="478,568" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                             <Sequence.Variables>
