@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1208,611" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1208,691" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -76,7 +76,6 @@
       <AssemblyReference>UiPath.Web</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="242,144" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -594,7 +593,7 @@
                             <Transition.To>
                               <State x:Name="__ReferenceID1" DisplayName="State - Check Queue" sap:VirtualizedContainerService.HintSize="182,61" sap2010:WorkflowViewState.IdRef="State_5">
                                 <State.Entry>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="838,2273" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="838,2624" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -612,9 +611,9 @@
                                         </InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="796,2081" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                                    <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="796,2432" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                                       <ui:InterruptibleWhile.Body>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="760,1914" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="760,2265" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -688,7 +687,7 @@
                                               </InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                           </ui:InvokeWorkflowFile>
-                                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="718,292" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="718,643" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                             <TryCatch.Try>
                                               <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" TimeoutMS="30000">
                                                 <ui:HttpClient.Attachments>
@@ -729,10 +728,10 @@
                                               </ui:HttpClient>
                                             </TryCatch.Try>
                                             <TryCatch.Catches>
-                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="479,477" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
@@ -1148,26 +1147,14 @@
                                       <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">bQueue</mca:CSharpValue>
                                     </Transition.Condition>
                                     <Transition.To>
-                                      <State x:Name="__ReferenceID4" DisplayName="State - Process" sap:VirtualizedContainerService.HintSize="524,1181" sap2010:WorkflowViewState.IdRef="State_6">
+                                      <State x:Name="__ReferenceID4" DisplayName="State - Process" sap:VirtualizedContainerService.HintSize="524,1097" sap2010:WorkflowViewState.IdRef="State_6">
                                         <State.Entry>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="478,817" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="478,733" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Assign sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                              <Assign.To>
-                                                <OutArgument x:TypeArguments="njl:JObject">
-                                                  <mca:CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_66">joScript</mca:CSharpReference>
-                                                </OutArgument>
-                                              </Assign.To>
-                                              <Assign.Value>
-                                                <InArgument x:TypeArguments="njl:JObject">
-                                                  <mca:CSharpValue x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">JObject.Parse(jaHttpReturn[0]["script"].ToString());</mca:CSharpValue>
-                                                </InArgument>
-                                              </Assign.Value>
-                                            </Assign>
                                             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,396" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                                               <ui:CommentOut.Body>
                                                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,318" sap2010:WorkflowViewState.IdRef="Sequence_28">
@@ -1193,10 +1180,10 @@
                                                 </Sequence>
                                               </ui:CommentOut.Body>
                                             </ui:CommentOut>
-                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Modify directory and use it&#xD;&#xA;Create and use a file according to the script in argument&#xD;&#xA;&#xD;&#xA;Argument : joScript / In / JObject" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="436,189" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False">
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Modify directory and use it&#xA;Create and use a file according to the script in argument&#xA;&#xA;Argument : arg_jaHttpReturn / In / JArray" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="436,205" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="sch6393-system-process-UIP\\Process.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
-                                                <InArgument x:TypeArguments="njl:JObject" x:Key="joScript">
-                                                  <mca:CSharpValue x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpValue`1_113">joScript</mca:CSharpValue>
+                                                <InArgument x:TypeArguments="njl:JArray" x:Key="arg_jaHttpReturn">
+                                                  <mca:CSharpValue x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpValue`1_120">jaHttpReturn</mca:CSharpValue>
                                                 </InArgument>
                                               </ui:InvokeWorkflowFile.Arguments>
                                               <sap:WorkflowViewStateService.ViewState>
@@ -1204,11 +1191,6 @@
                                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:InvokeWorkflowFile.WorkflowFileName>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">"sch6393-system-process-UIP\\" + joScript["xaml"].ToString();</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:InvokeWorkflowFile.WorkflowFileName>
                                             </ui:InvokeWorkflowFile>
                                           </Sequence>
                                         </State.Entry>
@@ -1235,9 +1217,6 @@
                                             </Transition.To>
                                           </Transition>
                                         </State.Transitions>
-                                        <State.Variables>
-                                          <Variable x:TypeArguments="njl:JObject" Name="joScript" />
-                                        </State.Variables>
                                       </State>
                                     </Transition.To>
                                   </Transition>
