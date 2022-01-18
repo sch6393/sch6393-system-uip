@@ -1,6 +1,6 @@
 {
-  "name": "sch6393-system-UIP",
-  "description": "sch6393-system-UIP",
+  "name": "sch6393-system-UIP-legacy",
+  "description": "sch6393-system-UIP-legacy",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.11.4]",
@@ -47,7 +47,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "2b794cfd-69c2-4c11-a612-6756073d2fda",
+      "uniqueId": "89fb400d-b75f-4cfd-bf0d-f3753673025d",
       "input": [],
       "output": []
     }
@@ -55,5 +55,5 @@
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Windows"
+  "targetFramework": "Legacy"
 }
