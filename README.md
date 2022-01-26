@@ -22,7 +22,7 @@ sch6393-system-UIP
 # Get Queue API
 * URL : `https://sch6393-system-nodejs.herokuapp.com/api/queue/first`
 * Method : POST
-* Parameter : userUid, apikey
+* Parameter : userUid, apikey, factor
 * Return
   ```JSON
   [
