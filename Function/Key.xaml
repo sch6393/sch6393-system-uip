@@ -3,6 +3,7 @@
     <x:Property Name="arg_bError" Type="OutArgument(x:Boolean)" />
     <x:Property Name="arg_strUserId" Type="OutArgument(x:String)" />
     <x:Property Name="arg_strApiKey" Type="OutArgument(x:String)" />
+    <x:Property Name="arg_strFactor" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>1208,701</sap:VirtualizedContainerService.HintSize>
@@ -121,13 +122,13 @@
               <av:Size x:Key="ShapeSize">200,68</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="1073,1279" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If sap:VirtualizedContainerService.HintSize="1031,1034" sap2010:WorkflowViewState.IdRef="If_2">
+            <If sap:VirtualizedContainerService.HintSize="998,1001" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">bKeyFile</mca:CSharpValue>
@@ -139,7 +140,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="513,874" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="480,841" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="strKey" />
                   </Sequence.Variables>
@@ -148,7 +149,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="471,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="438,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -202,16 +203,16 @@
                       </scg:List>
                     </ui:MultipleAssign.AssignOperations>
                   </ui:MultipleAssign>
-                  <ui:ReadTextFile DisplayName="Read Text File" FileName="ApiKey\\sch6393-system.key" sap:VirtualizedContainerService.HintSize="471,80" sap2010:WorkflowViewState.IdRef="ReadTextFile_2">
+                  <ui:ReadTextFile DisplayName="Read Text File" FileName="ApiKey\\sch6393-system.key" sap:VirtualizedContainerService.HintSize="438,80" sap2010:WorkflowViewState.IdRef="ReadTextFile_2">
                     <ui:ReadTextFile.Content>
                       <OutArgument x:TypeArguments="x:String">
                         <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">strKey</mca:CSharpReference>
                       </OutArgument>
                     </ui:ReadTextFile.Content>
                   </ui:ReadTextFile>
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="471,429" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,396" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                     <TryCatch.Try>
-                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="int i = 0;&#xA;string strLine = &quot;&quot;;&#xA;StringReader sr = new StringReader(strKey);&#xA;&#xA;// error CS0246: The type or namespace name 'StreamReader' could not be found (are you missing a using directive or an assembly reference?) At line 4&#xA;// 밖으로 빼면 문제가 없는 건 확인했으나 이상하게 Invoke Code 안에서 StringReader를 선언하면 해당 네임스페이스를 찾지 못함...&#xA;// 크로스 플랫폼으로 프로젝트를 작성하면 발생함. 윈도우로 하면 이상 없음&#xA;&#xA;while ((strLine = sr.ReadLine()) != null)&#xA;{&#xA;&#x9;if (i == 0)&#xA;&#x9;{&#xA;&#x9;&#x9;arg_strUserId = strLine;&#xA;&#x9;}&#xA;&#x9;else&#xA;&#x9;{&#xA;&#x9;&#x9;arg_strApiKey = strLine;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;i++;&#xA;}&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="int i = 0;&#xD;&#xA;string strLine = &quot;&quot;;&#xD;&#xA;StringReader sr = new StringReader(strKey);&#xD;&#xA;&#xD;&#xA;// error CS0246: The type or namespace name 'StreamReader' could not be found (are you missing a using directive or an assembly reference?) At line 4&#xD;&#xA;// 밖으로 빼면 문제가 없는 건 확인했으나 이상하게 Invoke Code 안에서 StringReader를 선언하면 해당 네임스페이스를 찾지 못함...&#xD;&#xA;// 크로스 플랫폼으로 프로젝트를 작성하면 발생함. 윈도우로 하면 이상 없음&#xD;&#xA;&#xD;&#xA;while ((strLine = sr.ReadLine()) != null)&#xD;&#xA;{&#xD;&#xA;&#x9;if (i == 0)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;arg_strUserId = strLine;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else if (i == 1)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;arg_strApiKey = strLine;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;arg_strFactor = strLine;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;i++;&#xD;&#xA;}&#xD;&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
                         <ui:InvokeCode.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="strKey">
                             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">strKey</mca:CSharpValue>
@@ -222,14 +223,17 @@
                           <InOutArgument x:TypeArguments="x:String" x:Key="arg_strApiKey">
                             <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">arg_strApiKey</mca:CSharpReference>
                           </InOutArgument>
+                          <InOutArgument x:TypeArguments="x:String" x:Key="arg_strFactor">
+                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">arg_strFactor</mca:CSharpReference>
+                          </InOutArgument>
                         </ui:InvokeCode.Arguments>
                       </ui:InvokeCode>
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="437,263" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -361,7 +365,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1031,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Function\\Log.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="998,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Function\\Log.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="x:Boolean" x:Key="arg_bError" />
                 <InArgument x:TypeArguments="x:String" x:Key="arg_strLogFileName">
