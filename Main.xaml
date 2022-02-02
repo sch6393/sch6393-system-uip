@@ -367,7 +367,7 @@
                       <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">!bErrorInit</mca:CSharpValue>
                     </Transition.Condition>
                     <Transition.To>
-                      <State x:Name="__ReferenceID3" DisplayName="State - Api Key" sap:VirtualizedContainerService.HintSize="138,61" sap2010:WorkflowViewState.IdRef="State_4">
+                      <State x:Name="__ReferenceID3" DisplayName="State - Api Key" sap:VirtualizedContainerService.HintSize="1079,1819" sap2010:WorkflowViewState.IdRef="State_4">
                         <State.Entry>
                           <Sequence sap:VirtualizedContainerService.HintSize="1033,1427" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <sap:WorkflowViewStateService.ViewState>
@@ -448,7 +448,7 @@
                             <If sap:VirtualizedContainerService.HintSize="991,342" sap2010:WorkflowViewState.IdRef="If_7">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
-                                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_123">strFactor.Equals("") || strFactor == null</mca:CSharpValue>
+                                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_126">strFactor == null</mca:CSharpValue>
                                 </InArgument>
                               </If.Condition>
                               <If.Then>
@@ -644,7 +644,7 @@
                               <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">!bErrorKey</mca:CSharpValue>
                             </Transition.Condition>
                             <Transition.To>
-                              <State x:Name="__ReferenceID1" DisplayName="State - Check Queue" sap:VirtualizedContainerService.HintSize="884,2637" sap2010:WorkflowViewState.IdRef="State_5">
+                              <State x:Name="__ReferenceID1" DisplayName="State - Check Queue" sap:VirtualizedContainerService.HintSize="182,61" sap2010:WorkflowViewState.IdRef="State_5">
                                 <State.Entry>
                                   <Sequence sap:VirtualizedContainerService.HintSize="838,2273" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                     <sap:WorkflowViewStateService.ViewState>
