@@ -91,4 +91,6 @@ String str_a = joScript["a"].ToString();
 
 <br>
 
-#
+# README.md
+* [English](README.md)
+* [Japanese](README_JP.md)
