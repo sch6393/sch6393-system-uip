@@ -19,24 +19,25 @@ sch6393-system-UIP
 
 <br>
 
-# Get Queue API
-* URL : `https://sch6393-system-nodejs.herokuapp.com/api/queue/first`
-* Method : POST
-* Parameter : userUid, apikey, factor
-* Return
-  ```JSON
-  [
-    {
-      "seqqueue":"---",
-      "id":"----------------------------",
-      "script":"{
-                  "a": "a",
-                  "b": "b",
-                  "c": "c"
-                }"
-    }
-  ]
-  ```
+# API
+* Get Queue 
+  * URL : `https://sch6393-system-nodejs.herokuapp.com/api/queue/first`
+  * Method : POST
+  * Parameter : userUid, apikey, factor
+  * Return
+    ```JSON
+    [
+      {
+        "seqqueue":"---",
+        "id":"----------------------------",
+        "script":"{
+                    "a": "a",
+                    "b": "b",
+                    "c": "c"
+                  }"
+      }
+    ]
+    ```
 
 <br>
 
@@ -56,6 +57,13 @@ sch6393-system-UIP
     "c": "c"
   }
   ```
+
+<br>
+
+# Group (Task)
+* [Web Page](#Web-Page) ➞ Dash Board ➞ Task ➞ Add Task ➞ Group ON/OFF
+* Execute in order by registered iTasks on group (Limit 5 iTasks)
+  >Queues, Tasks are Displayed yellow by executed in group
 
 <br>
 
