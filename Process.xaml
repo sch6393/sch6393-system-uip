@@ -76,6 +76,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID2}" sap2010:Annotation.AnnotationText="Sample" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="634,666.666666666667" sap2010:WorkflowViewState.IdRef="StateMachine_1">
@@ -91,13 +92,13 @@
     </sap:WorkflowViewStateService.ViewState>
     <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Parsing Script&#xA;&#xA;type : uipath" DisplayName="State - Parsing" sap:VirtualizedContainerService.HintSize="173.333333333333,123.333333333333" sap2010:WorkflowViewState.IdRef="State_1">
       <State.Entry>
-        <Sequence sap:VirtualizedContainerService.HintSize="476,486.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap:VirtualizedContainerService.HintSize="619.333333333333,1224.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="434,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_9">
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="577.333333333333,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_9">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_32">
@@ -139,9 +140,9 @@
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="577.333333333333,932" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
-              <Sequence sap:VirtualizedContainerService.HintSize="538.666666666667,865.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence sap:VirtualizedContainerService.HintSize="538.666666666667,694" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="strLogType" />
                   <Variable x:TypeArguments="x:String" Name="strLogFileName" />
@@ -221,7 +222,7 @@
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="496.666666666667,319.333333333333" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="496.666666666667,145.333333333333" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                   <Switch.Default>
                     <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.666666666667,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
                       <ui:MultipleAssign.AssignOperations>
@@ -571,7 +572,7 @@
             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">strType.Equals("uipath");</mca:CSharpValue>
           </Transition.Condition>
           <Transition.To>
-            <State x:Name="__ReferenceID1" DisplayName="State - UiPath" sap:VirtualizedContainerService.HintSize="154.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID1" DisplayName="State - UiPath" sap:VirtualizedContainerService.HintSize="527.333333333333,813.333333333333" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <Sequence sap:VirtualizedContainerService.HintSize="480.666666666667,444" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -581,7 +582,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,352" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                     <TryCatch.Try>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="njl:JObject" x:Key="arg_joScript">
                             <mca:CSharpValue x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">joScript</mca:CSharpValue>
@@ -589,7 +590,7 @@
                         </ui:InvokeWorkflowFile.Arguments>
                         <ui:InvokeWorkflowFile.WorkflowFileName>
                           <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">"sch6393-system-process-UIP\\" + joScript["xaml"].ToString();</mca:CSharpValue>
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">"Process\\" + joScript["xaml"].ToString();</mca:CSharpValue>
                           </InArgument>
                         </ui:InvokeWorkflowFile.WorkflowFileName>
                       </ui:InvokeWorkflowFile>
@@ -606,7 +607,7 @@
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                           </ActivityAction.Argument>
-                          <Sequence sap:VirtualizedContainerService.HintSize="472.666666666667,467.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence sap:VirtualizedContainerService.HintSize="473.333333333333,467.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="strLogType" />
                               <Variable x:TypeArguments="x:String" Name="strLogFileName" />
