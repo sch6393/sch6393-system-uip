@@ -95,6 +95,7 @@ String str_a = joScript["a"].ToString();
 # サンプルテスト
 * サンプルファイル
   * [Process.xaml](Process.xaml)
+    >このファイルをProcessフォルダーに入れてテスト
 * サンプルスクリプト
   ```C#
   {
