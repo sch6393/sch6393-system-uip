@@ -91,6 +91,19 @@ String str_a = joScript["a"].ToString();
 
 <br>
 
+# Sample Test
+* Sample File
+  * [Process.xaml](Process.xaml)
+* Sample Script
+  ```C#
+  {
+    "type": "uipath",
+    "xaml": "test.xaml"
+  }
+  ```
+
+<br>
+
 # README.md
 * [English](README.md)
 * [Japanese](README_JP.md)
