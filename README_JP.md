@@ -95,12 +95,13 @@ String str_a = joScript["a"].ToString();
 # サンプルテスト
 * サンプルファイル
   * [Process.xaml](Process.xaml)
-    >このファイルをProcessフォルダーに入れてテスト
+  * [Sample.xaml](Sample.xaml)
+    >2つのファイルをProcessフォルダーに入れてテスト
 * サンプルスクリプト
   ```C#
   {
     "type": "uipath",
-    "xaml": "test.xaml"
+    "xaml": "Sample.xaml"
   }
   ```
 
