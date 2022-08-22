@@ -3,9 +3,9 @@ sch6393-system-UIP
 
 <br>
 
-# Web Page
-* https://sch6393-system.web.app/
-* https://sch6393-system.firebaseapp.com/
+# README.md
+* [English](README.md)
+* [Japanese](README_JP.md)
 
 <br>
 
@@ -14,21 +14,52 @@ sch6393-system-UIP
 
 <br>
 
+# Web Page
+* https://sch6393-system.web.app/
+* https://sch6393-system.firebaseapp.com/
+
+<br>
+
 # TimeZone
 * Asia/Tokyo (GMT+9)
 
 <br>
 
+# Sample Test
+1. [Create key file](#get-useruid-apikey) and put key file in `ApiKey` folder
+2. Put this sample file in `Process` folder
+    * [Process.xaml](Process.xaml)
+    * [Sample.xaml](Sample.xaml)
+3. Create sample task and write sample script in `Add Task`
+    ```JSON
+    {
+      "type": "uipath",
+      "xaml": "Sample.xaml"
+    }
+    ```
+
+<br>
+
 # API
-* Get Queue 
-  * URL : `https://sch6393-system-nodejs.herokuapp.com/api/queue/first`
-  * Method : POST
-  * Parameter : userUid, apikey, factor
-  * Return
+* Get Queue
+  * Info
+    |Name|Value|
+    |-|-|
+    |URL|`https://sch6393-system-nodejs.herokuapp.com/api/queue/first`|
+    |Method|POST|
+
+  * Request Parameters
+    |Name|Type|Description|
+    |-|-|-|
+    |userUid|String||
+    |apikey|String||
+    |factor|String|Client Classification|
+
+  * Response
     ```JSON
     [
       {
-        "seqqueue":"---",
+        "seqqueue":"----------------------",
         "id":"----------------------------",
         "script":"{
                     "a": "a",
@@ -42,28 +73,37 @@ sch6393-system-UIP
 <br>
 
 # Get userUid, apikey
-* [Web Page](#Web-Page) ➞ Dash Board ➞ User Info
+* [Web Page](#Web-Page) ➞ About
+  * Create key file
+    ```
+    userUid
+    apikey
+    factor
+    ```
+    >File name : `sch6393-system.key`
 
 <br>
 
-# Add Task, iTask Script
-* [Web Page](#Web-Page) ➞ Dash Board ➞ Task ➞ Add Task
-* [Web Page](#Web-Page) ➞ Dash Board ➞ iTask ➞ Add iTask
-* Script
-  ```JSON
-  {
-    "a": "a",
-    "b": "b",
-    "c": "c"
-  }
-  ```
+# Add Task Script
+* [Web Page](#Web-Page) ➞ Task List ➞ Add Task
 
 <br>
 
+```
+# Add iTask Script
+* [Web Page](#Web-Page) ➞ iTask List ➞ Add iTask
+```
+>Suspend
+
+<br>
+
+```
 # Group (Task)
 * [Web Page](#Web-Page) ➞ Dash Board ➞ Task ➞ Add Task ➞ Group ON/OFF
 * Execute in order by registered iTasks on group (Limit 5 iTasks)
   >Queues, Tasks are Displayed yellow by executed in group
+```
+>Suspend
 
 <br>
 
@@ -90,22 +130,3 @@ String str_a = joScript["a"].ToString();
 ```
 
 <br>
-
-# Sample Test
-* Sample File
-  * [Process.xaml](Process.xaml)
-  * [Sample.xaml](Sample.xaml)
-    >Test by put this 2 files in Process folder
-* Sample Script
-  ```C#
-  {
-    "type": "uipath",
-    "xaml": "Sample.xaml"
-  }
-  ```
-
-<br>
-
-# README.md
-* [English](README.md)
-* [Japanese](README_JP.md)
