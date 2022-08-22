@@ -76,6 +76,8 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID2}" sap2010:Annotation.AnnotationText="Sample" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="634,666.666666666667" sap2010:WorkflowViewState.IdRef="StateMachine_1">
@@ -89,15 +91,15 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Parsing Script" DisplayName="State - Parsing" sap:VirtualizedContainerService.HintSize="173.333333333333,92" sap2010:WorkflowViewState.IdRef="State_1">
+    <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Parsing Script" DisplayName="State - Parsing" sap:VirtualizedContainerService.HintSize="600,1438" sap2010:WorkflowViewState.IdRef="State_1">
       <State.Entry>
-        <Sequence sap:VirtualizedContainerService.HintSize="553.333333333333,1039.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap:VirtualizedContainerService.HintSize="553.333333333333,1008.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="511.333333333333,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_9">
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="511.333333333333,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_9">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_32">
@@ -121,18 +123,6 @@
                   <ui:AssignOperation.Value>
                     <InArgument x:TypeArguments="x:Int32">
                       <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">0;</mca:CSharpValue>
-                    </InArgument>
-                  </ui:AssignOperation.Value>
-                </ui:AssignOperation>
-                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
-                  <ui:AssignOperation.To>
-                    <OutArgument x:TypeArguments="x:String">
-                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_43">strType</mca:CSharpReference>
-                    </OutArgument>
-                  </ui:AssignOperation.To>
-                  <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">
-                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"";</mca:CSharpValue>
                     </InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
@@ -508,7 +498,7 @@
             </State>
           </Transition.To>
         </Transition>
-        <Transition DisplayName="UiPath" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_3">
+        <Transition DisplayName="Continue" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:PointCollection x:Key="ConnectorLocation">266.666666666667,216 432.266666666667,216 432.266666666667,279.333333333333</av:PointCollection>
@@ -517,7 +507,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.Condition>
-            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">strType.Equals("uipath");</mca:CSharpValue>
+            <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">!bError</mca:CSharpValue>
           </Transition.Condition>
           <Transition.To>
             <State x:Name="__ReferenceID1" DisplayName="State - UiPath" sap:VirtualizedContainerService.HintSize="154.666666666667,61.3333333333333" sap2010:WorkflowViewState.IdRef="State_3">
@@ -680,9 +670,6 @@
           </Transition.To>
         </Transition>
       </State.Transitions>
-      <State.Variables>
-        <Variable x:TypeArguments="x:String" Name="strType" />
-      </State.Variables>
     </State>
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
