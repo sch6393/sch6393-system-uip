@@ -38,6 +38,19 @@ sch6393-system-UIP
     }
     ```
 
+* 新しいxamlファイルを作成する時はアーギュメント (Argument) の宣言が必要
+    |Name|Direction|Argument Type|
+    |-|-|-|
+    |`arg_joScript`|In|Newtonsoft.Json.Linq.JObject|
+
+<br>
+
+# スクリプトパーシング
+```C#
+JObject joScript = JObject.Parse(arg_jaHttpReturn[0]["script"].ToString());
+String str_a = joScript["a"].ToString();
+```
+
 <br>
 
 # API
@@ -74,7 +87,7 @@ sch6393-system-UIP
 
 # userUid, apikey取得
 * [Web Page](#Web-Page) ➞ About
-  * キーファイル作成
+  * キーファイルダウンロード
     ```
     userUid
     apikey
@@ -93,7 +106,7 @@ sch6393-system-UIP
 # iTaskスクリプト追加
 * [Web Page](#Web-Page) ➞ iTask List ➞ Add iTask
 ```
->Suspend
+>一時中断
 
 <br>
 
@@ -103,7 +116,7 @@ sch6393-system-UIP
 * 登録したiTaskをグループ化し、順序で実行（最大5個）
   >グループで実行されたQueueとTaskは黄色に表示
 ```
->Suspend
+>一時中断
 
 <br>
 
@@ -121,13 +134,5 @@ sch6393-system-UIP
 0 0,12 1 */2 *
 ```
 >https://crontab.guru/
-
-<br>
-
-# スクリプトパーシング
-```C#
-JObject joScript = JObject.Parse(arg_jaHttpReturn[0]["script"].ToString());
-String str_a = joScript["a"].ToString();
-```
 
 <br>

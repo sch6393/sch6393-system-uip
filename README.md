@@ -26,7 +26,7 @@ sch6393-system-UIP
 <br>
 
 # Sample Test
-1. [Create key file](#get-useruid-apikey) and put key file in `ApiKey` folder
+1. [Download key file](#get-useruid-apikey) and put key file in `ApiKey` folder
 2. Put this sample file in `Process` folder
     * [Process.xaml](Process.xaml)
     * [Sample.xaml](Sample.xaml)
@@ -37,6 +37,19 @@ sch6393-system-UIP
       "xaml": "Sample.xaml"
     }
     ```
+
+* Create new xaml file must declare an argument
+  |Name|Direction|Argument Type|
+  |-|-|-|
+  |`arg_joScript`|In|Newtonsoft.Json.Linq.JObject|
+
+<br>
+
+# Parsing Script
+```C#
+JObject joScript = JObject.Parse(arg_jaHttpReturn[0]["script"].ToString());
+String str_a = joScript["a"].ToString();
+```
 
 <br>
 
@@ -74,7 +87,7 @@ sch6393-system-UIP
 
 # Get userUid, apikey
 * [Web Page](#Web-Page) ➞ About
-  * Create key file
+  * Download key file
     ```
     userUid
     apikey
@@ -120,13 +133,5 @@ sch6393-system-UIP
 0 0,12 1 */2 *
 ```
 >https://crontab.guru/
-
-<br>
-
-# Parsing Script
-```C#
-JObject joScript = JObject.Parse(arg_jaHttpReturn[0]["script"].ToString());
-String str_a = joScript["a"].ToString();
-```
 
 <br>
