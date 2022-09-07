@@ -26,11 +26,28 @@ sch6393-system-UIP
 <br>
 
 # Sample Test
+* Directory
+  ```
+  ├ sch6393-system-UIP
+  │  ├ ...
+  │  ├ ApiKey
+  │  │  └ sch6393-system.key  ← 1
+  │  ├ Function
+  │  ├ Log
+  │  ├ Process
+  │  │  ├ Process.xaml        ← 2
+  │  │  └ Sample.xaml         ← 2
+  │  ├ .gitignore
+  │  ├ ...
+  ```
+
 1. [Download key file](#get-useruid-apikey) and put key file in `ApiKey` folder
-2. Put this sample file in `Process` folder
+
+1. Put this sample file in `Process` folder
     * [Process.xaml](Process.xaml)
     * [Sample.xaml](Sample.xaml)
-3. Create sample task and write sample script in `Add Task`
+
+1. Create sample task and write sample script in [Add Task](#add-task-script)
     ```JSON
     {
       "type": "uipath",
